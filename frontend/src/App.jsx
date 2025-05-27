@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Navbar from './components/shared/navbar'
-import { Home } from 'lucide-react'
+import Home from './components/Home'
+import Login from './components/auth/Login'
+import Signup from './components/auth/Signup'
 
 const appRouter = createBrowserRouter([
   {
