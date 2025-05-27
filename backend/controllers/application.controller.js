@@ -11,7 +11,7 @@ export const applyJob = async (req, res) => {
                 success: false
             })
         };
-
+        
         const existingApplication = await Application.findOne({ job: jobId, applicant: userId });
 
         if (existingApplication) {
@@ -21,6 +21,7 @@ export const applyJob = async (req, res) => {
             });
         }
 
+        
         const job = await Job.findById(jobId);
         if (!job) {
             return res.status(404).json({
@@ -28,7 +29,7 @@ export const applyJob = async (req, res) => {
                 success: false
             })
         }
-
+        
         const newApplication = await Application.create({
             job:jobId,
             applicant:userId,
@@ -69,7 +70,7 @@ export const getAppliedJobs = async (req,res) => {
         console.log(error);
     }
 }
- 
+
 export const getApplicants = async (req,res) => {
     try {
         const jobId = req.params.id;
@@ -105,7 +106,7 @@ export const updateStatus = async (req,res) => {
             })
         };
 
-    
+        
         const application = await Application.findOne({_id:applicationId});
         if(!application){
             return res.status(404).json({
@@ -114,6 +115,7 @@ export const updateStatus = async (req,res) => {
             })
         };
 
+        
         application.status = status.toLowerCase();
         await application.save();
 
