@@ -1,13 +1,28 @@
-import { useState } from 'react'
-import './App.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Navbar from './components/shared/navbar'
+import { Home } from 'lucide-react'
+
+const appRouter = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />
+  },
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '/signup',
+    element: <Signup />
+  },
+])
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1 className='text-red-500'>Lets build job portal </h1>
-    </>
+    <div>
+      <RouterProvider router={appRouter} />
+    </div>
   )
 }
 
