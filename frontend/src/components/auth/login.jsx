@@ -66,7 +66,7 @@ const Login = () => {
                             value={input.email}
                             name="email"
                             onChange={changeEventHandler}
-                            placeholder="abc@xyx"
+                            placeholder="abc@xyz.com"
                         />
                     </div>
 
@@ -77,7 +77,7 @@ const Login = () => {
                             value={input.password}
                             name="password"
                             onChange={changeEventHandler}
-                            placeholder="abc"
+                            placeholder="abc***"
                         />
                     </div>
                     <div className='flex items-center justify-between'>
