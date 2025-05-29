@@ -33,7 +33,7 @@ const CompanyCreate = () => {
         }
     }
     return (
-        <div>
+        <div className="min-h-screen bg-slate-100">
             <Navbar />
             <div className='max-w-4xl mx-auto'>
                 <div className='my-10'>
@@ -49,7 +49,7 @@ const CompanyCreate = () => {
                     onChange={(e) => setCompanyName(e.target.value)}
                 />
                 <div className='flex items-center gap-2 my-10'>
-                    <Button variant="outline" onClick={() => navigate("/admin/companies")}>Cancel</Button>
+                    <Button onClick={() => navigate("/admin/companies")}>Cancel</Button>
                     <Button onClick={registerNewCompany}>Continue</Button>
                 </div>
             </div>

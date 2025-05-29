@@ -18,12 +18,12 @@ const AdminJobs = () => {
     dispatch(setSearchJobByText(input));
   }, [input]);
   return (
-    <div>
+    <div className="min-h-screen bg-slate-100">
       <Navbar />
       <div className='max-w-6xl mx-auto my-10'>
         <div className='flex items-center justify-between my-5'>
           <Input
-            className="w-fit"
+            className="w-fit  bg-indigo-50 border border-purple-500"
             placeholder="Filter by name, role"
             onChange={(e) => setInput(e.target.value)}
           />

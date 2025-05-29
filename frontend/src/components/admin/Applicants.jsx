@@ -24,7 +24,7 @@ const Applicants = () => {
         fetchAllApplicants();
     }, []);
     return (
-        <div>
+        <div className="min-h-screen bg-slate-100">
             <Navbar />
             <div className='max-w-7xl mx-auto'>
                 <h1 className='font-bold text-xl my-5'>Applicants {applicants?.applications?.length}</h1>

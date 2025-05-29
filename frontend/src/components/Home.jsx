@@ -18,7 +18,7 @@ const Home = () => {
     }
   }, []);
   return (
-    <div>
+    <div className="bg-slate-100">
       <Navbar />
       <HeroSection />
       <CategoryCarousel />
