@@ -26,19 +26,20 @@ const Navbar = () => {
         toast.success(res.data.message);
       }
     } catch (error) {
-      console.log(error);
-      toast.error(error.response.data.message);
+      console.error(error);
+      toast.error(
+        error?.response?.data?.message || "Logout failed. Try again."
+      );
     }
   };
+
   return (
     <div className="bg-black">
-      <div className="flex items-center justify-between mx-auto max-w-7xl h-16">
-        <div className="flex items-center space-x-2">
-          <img src="/path-to-logo.png" alt="Logo" className="w-8 h-8" />
-          <h1 className="text-2xl font-bold text-white">
-            Next<span className="text-[#9975d7]">Hire</span>
-          </h1>
+      <div className="flex items-center justify-between mx-auto max-w-7xl h-16 px-4">
+        <div className="mb-4 md:mb-0">
+          <img src="/NextHire_logo.png" alt="NextHire Logo" className="h-10" />
         </div>
+
         <div className="flex items-center gap-12">
           <ul className="flex font-medium items-center gap-5">
             {user && user.role === "recruiter" ? (
@@ -74,13 +75,14 @@ const Navbar = () => {
               </>
             )}
           </ul>
+
           {!user ? (
             <div className="flex items-center gap-2">
               <Link to="/login">
                 <Button variant="outline">Login</Button>
               </Link>
               <Link to="/signup">
-                <Button className="bg-[#6A38C2] hover:bg-[#5b30a6]">
+                <Button className="bg-[#6A38C2] hover:bg-[#5b30a6] text-white">
                   Signup
                 </Button>
               </Link>
@@ -92,19 +94,19 @@ const Navbar = () => {
                   <Avatar>
                     <AvatarImage
                       src={user?.profile?.profilePhoto}
-                      alt="@shadcn"
+                      alt={`${user?.fullname}'s avatar`}
                     />
                   </Avatar>
                 </div>
               </PopoverTrigger>
 
               <PopoverContent className="w-80">
-                <div className="">
-                  <div className="flex gap-2 space-y-2">
-                    <Avatar className="cursor-pointer">
+                <div className="space-y-2">
+                  <div className="flex gap-2 items-center">
+                    <Avatar>
                       <AvatarImage
                         src={user?.profile?.profilePhoto}
-                        alt="@shadcn"
+                        alt={`${user?.fullname}'s avatar`}
                       />
                     </Avatar>
                     <div>
@@ -114,23 +116,28 @@ const Navbar = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex flex-col my-2 text-gray-600">
-                    {user && user.role === "student" && (
-                      <div className="flex w-fit items-center gap-2 cursor-pointer">
-                        <User2 />
-                        <Button variant="link">
-                          {" "}
-                          <Link to="/profile">View Profile</Link>
+
+                  <div className="flex flex-col mt-3 text-gray-600 gap-2">
+                    {user?.role === "student" && (
+                      <Link to="/profile">
+                        <Button
+                          variant="link"
+                          className="flex items-center gap-2 w-fit px-0"
+                        >
+                          <User2 size={16} />
+                          View Profile
                         </Button>
-                      </div>
+                      </Link>
                     )}
 
-                    <div className="flex w-fit items-center gap-2 cursor-pointer">
-                      <LogOut />
-                      <Button onClick={logoutHandler} variant="link">
-                        Logout
-                      </Button>
-                    </div>
+                    <Button
+                      onClick={logoutHandler}
+                      variant="link"
+                      className="flex items-center gap-2 w-fit px-0 text-red-600"
+                    >
+                      <LogOut size={16} />
+                      Logout
+                    </Button>
                   </div>
                 </div>
               </PopoverContent>

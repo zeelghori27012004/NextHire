@@ -5,8 +5,10 @@ const Footer = () => {
     <footer className="bg-black border-t border-t-gray-200 py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
-            <h2 className="text-white text-xl font-bold">NextHire</h2>
+          <div className="flex items-center space-x-2">
+            <h1 className="text-3xl font-bold text-white">
+              Next<span className="text-[#9975d7]">Hire</span>
+            </h1>
           </div>
 
           <div className="flex space-x-4 mt-4 md:mt-0">
