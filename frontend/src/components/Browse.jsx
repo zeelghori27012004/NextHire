@@ -15,7 +15,7 @@ const Browse = () => {
     };
   }, []);
   return (
-    <div>
+    <div className="min-h-screen bg-slate-100">
       <Navbar />
       <div className="bg-slate-100">
         <div className="bg-slate-100 max-w-7xl mx-auto my-2">
