@@ -3,12 +3,12 @@ Render :
 
 backend : https://nexthire-backend-y9o0.onrender.com
 
-frontend : https://nexthire-frontend-ndeh.onrender.com
+frontend : https://nexthire-deployment.onrender.com
 
-Vercel : backend
+Vercel : 
 
-next-hire-backend-psbrxs3w8-zeel-ghoris-projects.vercel.app
+backend : https://next-hire-backend-xi.vercel.app/
 
-netlify : frontend
+netlify : 
 
-next-hire-frontend.netlify.app
+frontend : https://next-hire-frontend.netlify.app/
