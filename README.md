@@ -78,28 +78,37 @@ backend : https://next-hire-backend-xi.vercel.app/
 ### 1. Clone the Repository
 
 git clone https://github.com/zeelghori27012004/NextHire
+
 cd NextHire
 
 ### 2. Create a .env file in the root of your backend directory with:
 
 MONGO_URI = your_database_url
+
 PORT= port_number
+
 SECRET_KEY = your_secret_key
 
 CLOUD_NAME= your_cloudinary_name
+
 API_KEY= your_cloudinary_API_key
+
 API_SECRET= your_cloudinary_API_secret
 
 ### 3. Setup Backend
 
 cd backend
+
 npm install
+
 npm run dev
 
 ### 4. Setup Frontend
 
 cd frontend
+
 npm install
+
 npm run dev
 
 
