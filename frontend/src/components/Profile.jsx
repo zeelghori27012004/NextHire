@@ -19,7 +19,7 @@ const Profile = () => {
     const {user} = useSelector(store=>store.auth);
 
     return (
-        <div className='bg-slate-100'>
+        <div className='bg-slate-100 min-h-screen'>
             <Navbar />
             <div className='max-w-4xl mx-auto bg-indigo-50 border border-purple-500 rounded-2xl my-5 p-8'>
                 <div className='flex justify-between'>
