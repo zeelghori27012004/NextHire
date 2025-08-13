@@ -5,18 +5,7 @@ NextHire is a full-featured job portal web application where **recruiters** and 
 
 ## Live Demo
 Render :
-
-frontend : https://nexthire-deployment.onrender.com
-
-backend : https://nexthire-backend-y9o0.onrender.com
-
-netlify : 
-
-frontend : https://next-hire-frontend.netlify.app/
-
-Vercel : 
-
-backend : https://next-hire-backend-xi.vercel.app/
+https://nexthire-main-deployment.onrender.com
 
 ##  Features
 
